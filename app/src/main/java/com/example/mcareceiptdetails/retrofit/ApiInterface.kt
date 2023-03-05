@@ -6,8 +6,6 @@ import retrofit2.http.GET
 
 
 interface ApiInterface {
-
     @GET("qr-scanner-codes/alpha-qr-gFpwhsQ8fkY1")
     fun getReceiptDetails(): Call<List<ReceiptDetails>>?
-
 }
