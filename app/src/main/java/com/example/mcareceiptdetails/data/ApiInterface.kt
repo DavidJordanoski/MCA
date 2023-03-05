@@ -1,4 +1,4 @@
-package com.example.mcareceiptdetails.retrofit
+package com.example.mcareceiptdetails.data
 
 import com.example.mcareceiptdetails.model.ReceiptDetails
 import retrofit2.Call

@@ -1,11 +1,11 @@
-package com.example.mcareceiptdetails.retrofit
+package com.example.mcareceiptdetails.data
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RetrofitClient {
+class Client {
 
     private var retrofit: Retrofit? = null
 

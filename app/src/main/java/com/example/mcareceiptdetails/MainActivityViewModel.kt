@@ -4,19 +4,18 @@ import android.util.Log
 import android.widget.TextView
 import androidx.lifecycle.ViewModel
 import com.example.mcareceiptdetails.model.ReceiptDetails
-import com.example.mcareceiptdetails.retrofit.ApiInterface
-import com.example.mcareceiptdetails.retrofit.RetrofitClient
+import com.example.mcareceiptdetails.data.ApiInterface
+import com.example.mcareceiptdetails.data.Client
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
 
 class MainActivityViewModel : ViewModel() {
 
     fun fetchData(textView: TextView) {
         var receiptDetailsList: ArrayList<ReceiptDetails>
         val apiInterface: ApiInterface? =
-            RetrofitClient().getClient()?.create(ApiInterface::class.java)
+            Client().getClient()?.create(ApiInterface::class.java)
         val call: Call<List<ReceiptDetails>>? = apiInterface?.getReceiptDetails()
         call?.enqueue(object : Callback<List<ReceiptDetails>> {
             override fun onResponse(
